@@ -1,0 +1,16 @@
+<div class="row">
+  <div *ngFor="let product of clCategoryProducts" class="col-md-3 mb-4">
+    <div class="p-3 card border bg-light">
+      <div class="card-header">
+        <h6 class="my-0 font-weight-normal">{{ product.clName }}</h6>
+      </div>
+      <div class="card-body">
+        <img class="img-fluid mb-4" [src]="'img/' + product.clPhoto" />
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">View</button>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>\${{ product.clPrice }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
