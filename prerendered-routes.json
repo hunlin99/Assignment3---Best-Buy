@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "/": {},
+    "/all-products": {},
+    "/category/appliances": {},
+    "/category/computers": {},
+    "/category/electronics": {},
+    "/product/1": {},
+    "/product/2": {},
+    "/product/3": {}
+  }
+}
