@@ -1,1 +1,22 @@
-<p>product-detail works!</p>
+<!-- src/app/components/product-detail/product-detail.component.html -->
+<div class="container-lg px-4" style="margin-top:100px;" *ngIf="clProduct">
+    <div class="row">
+      <div class="col-md-12 box-shadow">
+        <div class="p-3 card border bg-light">
+          <div class="card-header text-center">
+            <img class="img-fluid mb-4" [src]="'/img/' + clProduct.clPhoto" alt="{{ clProduct.clName }}">
+            <h4 class="my-0 font-weight-normal">{{ clProduct.clName }}</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>{{ clProduct.clDescription || 'No description available.' }}</li>
+              <li>
+                <h1 class="card-title pricing-card-title">${{ clProduct.clPrice.toFixed(2) }}</h1>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

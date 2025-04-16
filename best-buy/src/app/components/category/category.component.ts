@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CLProductsService } from '../../services/cl-product.service';
 import { CLProduct } from '../../models/cl-product.model';
+import { RouterModule } from '@angular/router'; 
+
 
 @Component({
   selector: 'app-category',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss']
 })
@@ -21,7 +23,7 @@ export class CLCategoryComponent {
     this.route.paramMap.subscribe(params => {
       const category = params.get('name');
       if (category) {
-        this.clCategoryProducts = this.clProductService.getProductsByCategory(category);
+        this.clCategoryProducts = this.clProductService.clgetProductsByCategory(category);
       }
     });
   }
