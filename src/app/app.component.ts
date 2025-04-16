@@ -9,6 +9,9 @@ import { Router, RouterOutlet, RouterModule } from '@angular/router'; // import 
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   constructor(private router: Router) {}
 
   onCategorySelect(event: Event) {
